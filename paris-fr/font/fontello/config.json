@@ -1,0 +1,94 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "0d08dbb1dd648a43bdea81b7e6c9e036",
+      "css": "location",
+      "code": 59392,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "598a5f2bcf3521d1615de8e1881ccd17",
+      "css": "clock",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "933f454f9d3342a055217fd695475d44",
+      "css": "vcard",
+      "code": 59394,
+      "src": "typicons"
+    },
+    {
+      "uid": "bb310a229d0d33a1cbe8aa151a7a8fcb",
+      "css": "briefcase",
+      "code": 59395,
+      "src": "typicons"
+    },
+    {
+      "uid": "9937d762aee170b7350b15dd02dd34a3",
+      "css": "cab",
+      "code": 61881,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "0357f7abbc0babf43509669f332e41e6",
+      "css": "mobile",
+      "code": 61707,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9e717a7080503cfe84c7c7bd336ffe5f",
+      "css": "wrench-outline",
+      "code": 59396,
+      "src": "typicons"
+    },
+    {
+      "uid": "ec3648a34c41b70671dc38dbb72deb04",
+      "css": "twitter",
+      "code": 61528,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "53d4dc777eeba379412efba3ee1cac9e",
+      "css": "facebook",
+      "code": 61522,
+      "src": "mfglabs"
+    },
+    {
+      "uid": "dad4e7f8dc2e57c92cffc0231202d9a0",
+      "css": "instagram",
+      "code": 62238,
+      "src": "brandico"
+    },
+    {
+      "uid": "e9e96618b0f44170930f9b179237c76e",
+      "css": "linkedin-rect",
+      "code": 62235,
+      "src": "brandico"
+    },
+    {
+      "uid": "47a1f80457068fbeab69fdb83d7d0817",
+      "css": "youtube-play",
+      "code": 61802,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9dd9e835aebe1060ba7190ad2b2ed951",
+      "css": "search",
+      "code": 59397,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "bbd66ef66bb8fa9edde54d9a90b89150",
+      "css": "user",
+      "code": 59398,
+      "src": "entypo"
+    }
+  ]
+}

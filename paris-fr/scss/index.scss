@@ -1,0 +1,324 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+html {
+  font-size: calc(10rem / 16); /* passage du em de 16px à 10px */
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+body {
+  font-family: MontserratVariable, Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
+}
+
+/* image responsive */
+img {
+  width: 100%;
+  height: auto;
+  /* Supprimer l'élément inline de l'image par défaut */
+  display: block;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+button {
+  @include button();
+}
+
+.wrapper > * {
+  flex: 1 100%;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  padding-top: 5em;
+
+  .link-button {
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-left: -1rem;
+    margin-top: 0.4rem;
+    color: $red;
+    text-transform: uppercase;
+    background: linear-gradient(to left, transparent 50%, $red 50%) right;
+    background-size: 200% 100%;
+    transition: all 0.4s ease;
+    &:hover {
+      background-position: left;
+      transition: all 0.4s ease;
+      color: $white;
+    }
+  }
+
+  .sidebar-column-start {
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding-top: 2.4rem;
+    padding-bottom: 6rem;
+    .title {
+      font-size: 2rem;
+      line-height: 1.33;
+      margin-bottom: 1.6rem;
+      font-weight: 700;
+    }
+    #quick,
+    #services {
+      padding: 0 2.5rem;
+    }
+    #quick {
+      .sidebar-nav {
+        .sidebar-items {
+          max-width: 31rem;
+          margin: 0 auto;
+          .sidebar-item {
+            margin-bottom: 1.7rem;
+            .button {
+              padding: 1rem 1.4rem;
+              color: $dark;
+              text-transform: uppercase;
+              font-size: 1rem;
+              font-weight: 700;
+              &:hover {
+                background-color: $lightGray;
+              }
+            }
+          }
+        }
+      }
+    }
+    #services {
+      margin-top: 2.4rem;
+      margin-bottom: 6rem;
+
+      .sidebar-menu {
+        .menu-items {
+          .menu-item {
+            .menu-link {
+              align-items: center;
+              border-top: 0.2rem solid $lightGray;
+              display: flex;
+              margin: 0;
+              margin-top: 0px;
+              padding: 1.3rem 0 1.7rem;
+              position: relative;
+              text-decoration: none;
+              font-size: 1.5rem;
+              color: $dark;
+              .menu-link-icon {
+                align-items: center;
+                background: $lightGray;
+                border-radius: 50%;
+                display: flex;
+                flex-shrink: 0;
+                height: 5.6rem;
+                justify-content: center;
+                margin-right: 1.6rem;
+                transition: background-color 0.2s ease;
+                width: 5.6rem;
+                transition: all 0.6s ease;
+                &:hover {
+                  background-color: $dark;
+                  color: $white;
+                  transition: all 0.4s ease;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .main {
+    padding: 0 15rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8rem;
+    box-sizing: border-box;
+    .card-img {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      img {
+        width: 100%;
+        transition: transform 0.3s;
+        &:hover {
+          -ms-transform: scale(1.5); /* IE 9 */
+          -webkit-transform: scale(1.5); /* Safari 3-8 */
+          transform: scale(1.5);
+        }
+      }
+    }
+    .card-category {
+      margin-top: -2.9rem;
+      background-color: $blue;
+      color: #fff;
+      display: inline-flex;
+      transform: skew(-5deg, -5deg);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.3;
+      padding: 1rem 1.6rem 0.9rem;
+      text-transform: uppercase;
+      position: relative;
+    }
+    .container {
+      max-width: 65rem;
+      .hero {
+        margin-bottom: 10rem;
+        .card {
+          .card-title {
+            font-size: 4.2rem;
+            font-weight: 900;
+            line-height: 1.14;
+            margin-top: 0.8rem;
+            margin-bottom: 1rem;
+            color: $dark;
+          }
+
+          .card-content {
+            background: #fff;
+            margin: -6rem auto;
+            max-width: 80%;
+            padding: 0 3rem;
+            margin-left: 8rem;
+            margin-right: 3rem;
+            position: relative;
+            text-align: left;
+            z-index: 1;
+            p {
+              line-height: 1.73;
+              color: $dark;
+            }
+          }
+        }
+      }
+    }
+    .card-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 4rem 9rem;
+      /* TODO border au milieu des cards */
+
+      .card {
+        grid-auto-rows: auto;
+        .card-title {
+          font-size: 1.8rem;
+          font-weight: 800;
+          line-height: 1.33;
+          margin-top: 0.8rem;
+          color: $dark;
+        }
+        .card-content {
+          background: #fff;
+          margin: 0 auto;
+          padding: 0 2rem;
+          position: relative;
+          text-align: left;
+          z-index: 1;
+          p {
+            line-height: 1.73;
+          }
+        }
+      }
+    }
+  }
+  .sidebar-column-end {
+    margin: 0;
+    padding: 0 2.5rem;
+    position: relative;
+    z-index: 10;
+    padding-top: 2.4rem;
+    padding-bottom: 6rem;
+
+    #calendar {
+      .sidebar {
+        .sidebar-items {
+          max-width: 31rem;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          list-style: none;
+          margin: 0 auto;
+          padding: 0;
+          float: left;
+          .sidebar-item {
+            color: $dark;
+            .calendar-content {
+              border-bottom: 0.1rem solid #e8e8e8;
+              display: flex;
+              margin: 0;
+              padding: 1.5rem 0 2.5rem;
+              position: relative;
+              /* TODO hide last-child border bottom */
+              &:after {
+                background: #e22c3f;
+                bottom: 0;
+                content: "";
+                left: 1.6rem;
+                position: absolute;
+                top: 9.3rem;
+                width: 0.1rem;
+              }
+              .calendar-date {
+                flex-grow: 0;
+                flex-shrink: 0;
+                font-size: 2.8rem;
+                font-weight: 600;
+                line-height: 1;
+                margin: 0 2rem 0.7rem 0;
+                padding-top: 0.1rem;
+                display: flex;
+                flex-direction: column;
+                .calendar-date-icon {
+                  color: $red;
+                  text-align: center;
+                  height: 3.2rem;
+                  width: 3.2rem;
+                  font-size: 1.8rem;
+                  font-weight: 300;
+                }
+              }
+              .calendar-body {
+                p {
+                  font-size: 1.3rem;
+                  line-height: 1.54;
+                  margin: 0;
+                  padding: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "./header.scss";
+@import "./footer.scss";
+@import "./responsive.scss";

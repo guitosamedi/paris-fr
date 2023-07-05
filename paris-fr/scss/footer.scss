@@ -1,0 +1,177 @@
+/* FOOTER */
+.footer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  & > section {
+    padding: 1rem;
+  }
+  .footer-column-start {
+    background-color: $white;
+    background-image: linear-gradient(
+      180deg,
+      rgba(7, 31, 50, 0.03) 0,
+      transparent 10rem
+    );
+    & > div > section {
+      margin: 3rem 0;
+    }
+    #locations {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      #form-location {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .logo {
+          width: 15rem;
+          display: inline-block;
+          margin-right: 2rem;
+        }
+        .location {
+          width: 268px;
+          position: relative;
+          padding: 1.6rem;
+          border: none;
+          background-color: $lightGray;
+          -moz-appearance: none; /* Firefox */
+          -webkit-appearance: none; /* Safari and Chrome */
+          appearance: none;
+        }
+      }
+    }
+    #more {
+      margin: 0 auto;
+      & > nav > ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        & > li {
+          a {
+            color: $dark;
+            & > h5 {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+    #copyright {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid $lightGray;
+      padding-top: 3rem;
+      & > nav > ul {
+        display: flex;
+        align-items: center;
+        gap: 0 2rem;
+        & > li {
+          a {
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            font-size: 1rem;
+            color: $dark;
+            text-transform: uppercase;
+            .link-button {
+              letter-spacing: 0.1em;
+              font-weight: 700;
+              font-size: 1rem;
+              margin-top: 0.4rem;
+              margin-right: -1rem;
+              color: $red;
+              text-transform: uppercase;
+              background: linear-gradient(to left, transparent 50%, $red 50%)
+                right;
+              background-size: 200% 100%;
+              transition: all 0.4s ease;
+              &:hover {
+                background-position: left;
+                transition: all 0.4s ease;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .footer-column-end {
+    background-color: #071f32;
+    color: $white;
+    & > div > section {
+      margin: 3rem 0;
+    }
+    #newsletter {
+      .link-button {
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-top: 0.4rem;
+        margin-right: -1rem;
+        color: $white;
+        background: linear-gradient(to left, $red 50%, $white 50%) right;
+        background-size: 200% 100%;
+        transition: all 0.4s ease;
+        &:hover {
+          background-position: left;
+          transition: all 0.4s ease;
+          color: $red;
+        }
+      }
+    }
+    #social {
+      & > nav > ul {
+        display: flex;
+        align-items: center;
+        gap: 0 2rem;
+        & > li {
+          a {
+            letter-spacing: 0.1em;
+            font-size: 2rem;
+            color: $white;
+            .link-button {
+              letter-spacing: 0.1em;
+              font-weight: 700;
+              font-size: 1rem;
+              margin-top: 0.4rem;
+              margin-right: -1rem;
+              color: $red;
+              text-transform: uppercase;
+              background: linear-gradient(to left, transparent 50%, $red 50%)
+                right;
+              background-size: 200% 100%;
+              transition: all 0.4s ease;
+              &:hover {
+                background-position: left;
+                transition: all 0.4s ease;
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+    #help {
+      .link-button {
+        letter-spacing: 0.1em;
+        font-size: 1.5rem;
+        font-weight: lighter;
+        margin-top: 0.4rem;
+        margin-right: -1rem;
+        color: $red;
+        background: linear-gradient(to left, transparent 50%, $red 50%) right;
+        background-size: 200% 100%;
+        transition: all 0.4s ease;
+        &:hover {
+          background-position: left;
+          transition: all 0.4s ease;
+          color: $white;
+        }
+      }
+    }
+  }
+}
