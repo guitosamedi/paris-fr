@@ -1,2 +1,2 @@
-# paris-fr
-CDA Projet Html-Css-Js
+# Paris.fr
+HTML-CSS clone of paris.fr website
